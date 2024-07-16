@@ -1,0 +1,22 @@
+{
+    "compilerOptions": {
+      "target": "ES6",               // Specify ECMAScript target version: 'ES3' (default), 'ES5', 'ES6'/ES2015, 'ES2016', 'ES2017', 'ES2018', 'ES2019', 'ES2020' or 'ESNext'.
+      "module": "commonjs",          // Specify module code generation: 'none', 'commonjs', 'amd', 'system', 'umd', 'es6', 'es2015' or 'ESNext'.
+      "moduleResolution": "node",    // Specify module resolution strategy: 'node' (Node.js) or 'classic' (TypeScript pre-1.6).
+      "checkJs": true,               // Enable type checking in JavaScript files.
+      "esModuleInterop": true,       // Enables emit interoperability between CommonJS and ES Modules via creation of namespace objects for all imports.
+      "allowSyntheticDefaultImports": true,  // Allow default imports from modules with no default export.
+      "resolveJsonModule": true,     // Allow importing modules with a '.json' extension.
+      "lib": ["es6"],                // Specify library files to be included in the compilation.
+      "types": ["node", "playwright"] // Include type definitions for Node.js and Playwright.
+    },
+    "include": [
+      "tests/frontend/*.js", // Adjust this path according to where your test files are located.
+      "pages/*.js"  // Adjust this path according to where your page object files are located.
+    ],
+    "exclude": [
+      "node_modules",   // Exclude node_modules directory.
+      "**/*.d.ts"       // Exclude all declaration files.
+    ]
+  }
+  
