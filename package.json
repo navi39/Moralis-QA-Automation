@@ -3,7 +3,11 @@
   "version": "1.0.0",
   "description": "Moralis test automation project",
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+    "test":"npx playwright test",
+    "cleanup": "node ./utils/cleanup.js",
+    "test:full": "npm run cleanup && npm run test"
+  },
   "keywords": [],
   "author": "navi39S",
   "license": "ISC",
@@ -12,6 +16,7 @@
     "@types/node": "^20.14.10"
   },
   "dependencies": {
-    "dotenv": "^16.4.5"
+    "dotenv": "^16.4.5",
+    "winston": "^3.13.1"
   }
 }
