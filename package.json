@@ -4,7 +4,7 @@
   "description": "Moralis test automation project",
   "main": "index.js",
   "scripts": {
-    "test":"npx playwright test",
+    "test": "npx playwright test",
     "cleanup": "node ./utils/cleanup.js",
     "test:full": "npm run cleanup && npm run test"
   },
@@ -17,6 +17,9 @@
   },
   "dependencies": {
     "dotenv": "^16.4.5",
+    "moralis": "^2.26.9",
+    "nock": "^13.5.4",
+    "node-fetch": "^3.3.2",
     "winston": "^3.13.1"
   }
 }
