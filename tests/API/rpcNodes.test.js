@@ -61,6 +61,7 @@ test.describe("RPC node tests:", () => {
   test("eth_blockNumber - Invalid Node URL", async () => {
     const testName = test.info().title;
     logger.info(`==== Starting Test: ${testName} ====`);
+
     let response;
     logger.info("Call method getBlockNumber with invalid node URL");
     try {
@@ -70,14 +71,15 @@ test.describe("RPC node tests:", () => {
       expect(error).toBeDefined();
     }
     expect(response).toBeUndefined();
+
     logger.info(`==== Passed Test: ${testName} ====`);
   });
 
   test("getBlockByNumber - Invalid Node URL", async () => {
     const testName = test.info().title;
     logger.info(`==== Starting Test: ${testName} ====`);
-    let response;
 
+    let response;
     logger.info("Fetch correct block number");
     const blockNumberResponse = await getBlockNumber(nodeUrl);
     const blockNumber = blockNumberResponse.data.result;
@@ -93,6 +95,7 @@ test.describe("RPC node tests:", () => {
       expect(error).toBeDefined();
     }
     expect(response).toBeUndefined();
+
     logger.info(`==== Passed Test: ${testName} ====`);
   });
 
@@ -110,8 +113,8 @@ test.describe("RPC node tests:", () => {
   test("getTransactionByHash - Invalid Node URL", async () => {
     const testName = test.info().title;
     logger.info(`==== Starting Test: ${testName} ====`);
-    let response;
 
+    let response;
     logger.info("Fetch correct block number");
     const blockNumberResponse = await getBlockNumber(nodeUrl);
     const blockNumber = blockNumberResponse.data.result;
@@ -130,14 +133,15 @@ test.describe("RPC node tests:", () => {
       expect(error).toBeDefined();
     }
     expect(response).toBeUndefined();
+
     logger.info(`==== Passed Test: ${testName} ====`);
   });
 
   test("getTransactionByHash - Invalid Transaction Hash", async () => {
     const testName = test.info().title;
     logger.info(`==== Starting Test: ${testName} ====`);
-    let response;
 
+    let response;
     logger.info(
       "Call method getTransactionByHash with invalid transaction hash"
     );
@@ -151,6 +155,7 @@ test.describe("RPC node tests:", () => {
       expect(error).toBeDefined();
     }
     expect(response.data.result).toBeNull();
+
     logger.info(`==== Passed Test: ${testName} ====`);
   });
 });
